@@ -43,9 +43,27 @@ $endif$
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 % use microtype if available
 \IfFileExists{microtype.sty}{\usepackage{microtype}}{}
-$if(geometry)$
-\usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
-$endif$
+
+%%% Seitenlayout
+\usepackage[
+  includeheadfoot,
+  top=$top$,
+  bottom=$bottom$,
+  left=$left$,
+  right=$right$,
+  headheight=$headheight$,
+  headsep=\dimexpr$top$-$headheight$\relax
+]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\lhead{$title$}
+\rhead{\thepage}
+\lfoot{\small www.informationspraxis.de}
+\cfoot{}
+%%%
+
 $if(natbib)$
 \usepackage{natbib}
 \bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
