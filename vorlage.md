@@ -1,13 +1,3 @@
----
-title: "Titel (deutsch)"
-title-en: English title
-year: 2014
-issue: 1
-author:
-    - Vorname Nachname
-    - Vorname Nachname
-...
-
 Einleitung
 ----------------------
 

@@ -15,10 +15,10 @@ LATEX_OPTIONS+=-V headheight=0.8cm
 LATEX_OPTIONS+=-V top=2cm -V bottom=2cm -V left=2cm -V right=2cm
 
 .md.html:
-	pandoc -s -S -t html5 $(HTML_OPTIONS) -o $@ $<
+	cat $(patsubst %.md,%.yml,$<) $< | pandoc -s -S -t html5 $(HTML_OPTIONS) -o $@ -
 
 .md.tex:
-	pandoc -s -S -t latex $(LATEX_OPTIONS) -o $@ $<
+	cat $(patsubst %.md,%.yml,$<) $< | pandoc -s -S -t latex $(LATEX_OPTIONS) -o $@ -
 
 .md.pdf:
-	pandoc -s -S $(LATEX_OPTIONS) -o $@ $<
+	cat $(patsubst %.md,%.yml,$<) $< | pandoc -s -S $(LATEX_OPTIONS) -o $@ -
