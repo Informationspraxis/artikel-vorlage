@@ -57,11 +57,52 @@ $endif$
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
+% Kopfzeile
 \renewcommand{\headrulewidth}{0pt}
-\lhead{$title$}
-\rhead{\thepage}
-\lfoot{\small www.informationspraxis.de}
+\lhead{$for(author)$$author$$sep$ \and $endfor$: $title$}
+\rhead{\textbf{$year$} / $issue$}
+% Fußzeile
+\lfoot{
+  \small \href{http://www.informationspraxis.de}{\underline{www.informationspraxis.de}}
+}
 \cfoot{}
+% TODO: Creative Commons
+\rfoot{\thepage}
+% Titel von Tabellen und Abbildungen
+\usepackage[small,figurename=Abbildung,tablename=Tabelle]{caption}
+% Titelseite
+\fancypagestyle{plain}{
+    \lhead{LOGO}
+}
+\makeatletter
+\renewcommand\@maketitle{
+  % TODO: affiliation
+  {\bfseries $for(author)$$author$$sep$, $endfor$ \par}
+  {\Large {\bfseries {\@title}} \par}
+
+  Zusammenfassung
+
+  ...
+
+  Schlüsselwörter
+
+  ...
+
+  {\large {\bfseries $title-en$} \par}
+
+  Abstract
+
+  ...
+
+  Keywords
+
+  ...
+
+  Classification: ...
+}
+\makeatother
+%\renewcommand\maketitle{%
+%}
 %%%
 
 $if(natbib)$

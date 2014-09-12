@@ -1,9 +1,14 @@
 ---
 title: "Titel (deutsch)"
-title_en: English title
+title-en: English title
+year: 2014
+issue: 1
+author:
+    - Vorname Nachname
+    - Vorname Nachname
 ...
 
-1 Überschrift 1. Ebene {.c0 .c19}
+Einleitung
 ----------------------
 
 Diese Vorlage ist **nicht aktuell** und dient lediglich als Platzhalter!
@@ -12,9 +17,11 @@ Text hier. Und hier ist ein in eigenen Worten wiedergegebenes Zitat.
 (vgl. AutorIn & AutorIn, 2009). Text hier. Text hier. Text hier. Pro
 Kapitel mind. eine halbe Seite. Text hier. Text hier.
 
-![](images/image01.png)
+<!--![](images/image01.png)-->
 
 Abb. 1: Titel Abbildung 1 (normale Option)
+
+Siehe [Einleitung](#einleitung)
 
 2 Überschrift 1. Ebene {.c0 .c19}
 ----------------------
@@ -23,7 +30,7 @@ Text hier. Text hier. Text hier. “Ein wörtliches Zitat soll sehr sparsam
 eingesetzt werden.” (NAME, Name & NAME, 2014) Text hier. Text hier. Text
 hier. Text hier.1
 
-![](images/image00.png)
+<!--![](images/image00.png)-->
 
 Abb. 2: Titel Abbildung 2 (Option für breite Abbildungen)
 
@@ -73,7 +80,7 @@ hier. Text hier.
 | Zeile 4            | 198                | 67,325             | 789567,03          |
 +--------------------+--------------------+--------------------+--------------------+
 
-Tabelle 1: Wahllos eingegebene Zahlen und ein Minuszeichen
+:Wahllos eingegebene Zahlen und ein Minuszeichen
 
 #### 2.2.1 Überschrift 3. Ebene {.c0 .c16}
 
