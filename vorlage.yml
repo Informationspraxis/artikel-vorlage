@@ -1,0 +1,41 @@
+---
+title: Deutscher Titel
+title-en: English title
+year: 2014
+issue: 1 # ???
+author:
+    - name: Vorname Nachname
+      email: vorname@email.tld
+      url: http://example.org/
+    - name: Vorname Nachname
+      email: vorname@email.tld
+      affiliation: Beispielorganisation
+abstract:
+    Jeder Artikel muss eine Zusammenfassung in deutscher Sprache enthalten. Die
+    Zusammenfassung soll einen kurzen und vollständigen Überblick über den Inhalt
+    des Artikels geben. Die wichtgisten Ergebnisse, Hintergrund und Vorgehensweise
+    des Artikels sollten klar nachvollziehbar aus der Zusammenfassung hervorgehen.
+    Der Umfang der Zusammenfassung ist auf 700 Zeichen (incl. Leerzeichen) 
+    beschränkt. Die Zusammenfassung sollte aus einem einzelnen Absatz bestehen.
+abstract-en:
+    Every article must conatain an English abstract. The abstract is limited to one
+    paragraph and up to 700 characters.
+keywords:
+    - Schlüsselwort 1
+    - Schlüsselwort 2
+    - Schlüsselwort 3
+    - ...
+keywords-en:
+    - keyword 1
+    - keyword 2
+    - keyword 3
+    - ...
+jita: 
+    - A. Theoretische und allgemeine Aspekte von Bibliotheken und Informationen
+    - GI. Weiterbildung
+
+category: Fachbeitrag
+license: 
+    short: CC-BY-SA 4.0
+doi: 123.456/7890abcde
+...
