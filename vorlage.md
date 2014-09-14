@@ -36,14 +36,17 @@ Text hier. Text hier. Text hier. Text hier. Text hier. Text hier. Text
 hier. Text hier. Text hier. Text hier. Text hier. Text hier. Text hier.
 Text hier. Text hier.Text hier. Text hier. Text hier. Text hier. Text
 hier. Text hier. Text hier. Text hier. Text hier. Text hier. Text hier.
-Text hier. Text hier. Text hier. Text hier.^[[1]](#ftnt1)^
+Text hier. Text hier. Text hier. Text hier.^[Eine Fußnote. So wenige wie
+möglich verwenden]
 
 ### 2.2 Überschrift 2. Ebene {.c0 .c22}
 
 Text hier. Text hier. Hervorhebungen sparsamund immer nur kursiv
 einsetzen. Text hier. Text hier. Text hier. Text hier. Text hier. Text
 hier. Text hier. Text hier.Text hier. Text hier. Text hier. Text hier.
-Text hier. Text hier.^[[2]](#ftnt2)^Verwenden Sie nicht die
+Text hier. Text hier.^[Leider funktionieren bei Google keine Endnoten, aber
+das wäre unsere Empfehlung für die eingereichten Artikel]
+Verwenden Sie nicht die
 automatisierten Aufzählungen Ihres Textprogrammes. Aufzählungszeichen
 Minus Leerzeichen Text der Aufzählung.\
 
@@ -57,8 +60,6 @@ Text hier. Text hier. Text hier. Text hier. Text hier. Text hier. Text
 hier. Text hier. Text hier. Text hier. Text hier. Text hier. Text hier.
 Text hier. Text hier.Text hier. Text hier. Text hier. Text hier. Text
 hier. Text hier.
-
-[](#)[](#)
 
 +--------------------+--------------------+--------------------+--------------------+
 | Spalte 1           | Spalte 2           | Spalte 3           | Spalte 4           |
@@ -117,33 +118,3 @@ Nachname, Vorname, Nachname, Vorname & Nachname, Vorname (2010). Titel
 des Artikels. In: Titel des Journals109, 2, S. 16–26. [Zugriff am 10.
 Aug. 2014]. DOI: http://dx.doi.org/10.2403/jo.nam.2010.07.008.
 
-AutorInnen {.c0 .c19}
-----------
-
-Vorname Nachname, E-Mail-Adresse
-
-Ihre Institution, Straße ggf. Postfach, PLZ Stadt, Land
-
-URL
-
-Vorname Nachname, E-Mail-Adresse
-
-Ihre Institution, Straße ggf. Postfach, PLZ Stadt, Land
-
-URL
-
-Vorname Nachname, E-Mail-Adresse
-
-Ihre Institution, Straße ggf. Postfach, PLZ Stadt, Land
-
-URL
-
-* * * * *
-
-[[1]](#ftnt_ref1)Eine Fußnote. So wenige wie möglich verwenden
-
-[[2]](#ftnt_ref2)Leider funktionieren bei Google keine Endnoten, aber
-das wäre unsere Empfehlung für die eingereichten Artikel
-
-[[a]](#cmnt_ref1)Überschrift vierter Ebene ist zu viel der
-Verschachtelung

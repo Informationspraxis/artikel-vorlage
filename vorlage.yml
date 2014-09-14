@@ -1,11 +1,16 @@
 ---
-title: "Titel (deutsch)"
+title: Deutscher Titel
 title-en: English title
 year: 2014
-issue: 1
+issue: 1?
 author:
-    - Vorname Nachname
-    - Vorname Nachname
+    - name: Vorname Nachname
+      email: vorname@email.tld
+      url: http://example.org/
+    - name: Vorname Nachname
+      email: vorname@email.tld
 abstract: ...
 keywords: ...
+keywords-de: ...
+jita: ...
 ...

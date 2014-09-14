@@ -59,7 +59,7 @@ $endif$
 \pagestyle{fancy}
 % Kopfzeile
 \renewcommand{\headrulewidth}{0pt}
-\lhead{$for(author)$$author$$sep$ \and $endfor$: $title$}
+\lhead{$for(author)$$author.name$$sep$ \and $endfor$: $title$}
 \rhead{\textbf{$year$} / $issue$}
 % Fußzeile
 \lfoot{
@@ -76,8 +76,8 @@ $endif$
 }
 \makeatletter
 \renewcommand\@maketitle{
-  % TODO: affiliation
-  {\bfseries $for(author)$$author$$sep$, $endfor$ \par}
+  % TODO: affiliation, email, ...
+  {\bfseries $for(author)$$author.name$$sep$, $endfor$ \par}
   {\Large {\bfseries {\@title}} \par}
 
   Zusammenfassung
@@ -100,10 +100,26 @@ $endif$
 
   Classification: ...
 }
-\makeatother
+
+$if(endnotes)$
+\usepackage{endnotes}
+\let\footnote\endnote
+
+%Linie statt "Anmerkungen"
+%\def\enoteheading{\par\kern2\baselineskip%
+%\footnoterule%
+%\kern1\baselineskip}
+% subsection statt section
+\def\enoteheading{\subsection*{\notesname
+\@mkboth{\MakeUppercase{\notesname}}{\MakeUppercase{\notesname}}}%
+\mbox{}\par\vskip-\baselineskip}
+\def\notesname{Anmerkungen}
+\def\enotesize{\normalsize}
+$endif$
 %\renewcommand\maketitle{%
 %}
 %%%
+\makeatother
 
 $if(natbib)$
 \usepackage{natbib}
@@ -193,9 +209,7 @@ $endif$
 $if(subtitle)$
 \subtitle{$subtitle$}
 $endif$
-$if(author)$
 \author{$for(author)$$author$$sep$ \and $endfor$}
-$endif$
 $if(date)$
 \date{$date$}
 $endif$
@@ -243,6 +257,23 @@ $if(biblatex)$
 \printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
 
 $endif$
+
+$if(endnotes)$
+\theendnotes
+$endif$
+
+% \hrulefill
+\subsection*{AutorInnen}
+
+$for(author)$
+$author.name$$if(author.email)$,$author.email$$endif$
+
+$if(author.affiliation)$$author.affiliation$$if(author.address)$,$endif$$endif$$if(author.address)$$author.address$$endif$
+
+$if(author.url)$ \url{$author.url$}$endif$
+
+$endfor$
+
 $for(include-after)$
 $include-after$
 
