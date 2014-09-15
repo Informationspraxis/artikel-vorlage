@@ -1,4 +1,4 @@
-default: vorlage.pdf vorlage.html
+default: vorlage.pdf vorlage.html vorlage.docx
 
 # Artikel-Vorlage für Pandoc (LaTeX und HTML)
 TEMPLATE=informationspraxis-artikel-vorlage
@@ -23,7 +23,7 @@ LATEX_OPTIONS+=-V graphics=1
 
 
 # Konvertierungsregeln von Markdown (Artikel) und YAML (Metadaten) nach HTML & PDF
-.SUFFIXES: .md .html .tex .pdf
+.SUFFIXES: .md .html .tex .pdf .docx .odt
 .PHONY: clean
 
 .md.html:
@@ -34,6 +34,9 @@ LATEX_OPTIONS+=-V graphics=1
 
 .md.pdf:
 	cat $(patsubst %.md,%.yml,$<) $< | pandoc -s -S $(LATEX_OPTIONS) -o $@ -
+
+.md.docx:
+	cat $(patsubst %.md,%.yml,$<) $< | pandoc -s -S -o $@ -
 
 clean:
 	rm -f *.{log,aux,toc}

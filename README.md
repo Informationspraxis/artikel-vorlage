@@ -14,9 +14,12 @@ und die dazugehörigen Metadaten in der Datei
 * `vorlage.yml`
 
 Unter einem Unix-System mit LaTeX und Pandoc lässt sich die Vorlage
-folgendermaßen nach HTML und PDF konvertieren:
+folgendermaßen nach PDF, HTML und DOCX konvertieren:
 
-    make vorlage.html vorlage.pdf
+    make
+
+Die HTML-Version ist bislang noch nicht angepasst und die DOCX-Version enthält
+(absichtlich) keine Metadaten sondern nur den Artikelinhalt.
 
 # Anleitung
 
