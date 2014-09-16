@@ -7,7 +7,7 @@ Text hier. Und hier ist ein in eigenen Worten wiedergegebenes Zitat.
 (vgl. AutorIn & AutorIn, 2009). Text hier. Text hier. Text hier. Pro
 Kapitel mind. eine halbe Seite. Text hier. Text hier.
 
-<!--![](images/image01.png)-->
+![](images/image01.png)
 
 Abb. 1: Titel Abbildung 1 (normale Option)
 
@@ -20,7 +20,6 @@ Text hier. Text hier. Text hier. “Ein wörtliches Zitat soll sehr sparsam
 eingesetzt werden.” (NAME, Name & NAME, 2014) Text hier. Text hier. Text
 hier. Text hier.1
 
-<!--![](images/image00.png)-->
 
 Abb. 2: Titel Abbildung 2 (Option für breite Abbildungen)
 
@@ -66,7 +65,7 @@ hier. Text hier.
 +--------------------+--------------------+--------------------+--------------------+
 | Zeile 2            | 123,45             | 17,2               | 1232,23            |
 +--------------------+--------------------+--------------------+--------------------+
-| Zeile 3            | 56,78              | -                  | 189,9              |
+| Zeile 3            | 56,78              | --                 | 189,9              |
 +--------------------+--------------------+--------------------+--------------------+
 | Zeile 4            | 198                | 67,325             | 789567,03          |
 +--------------------+--------------------+--------------------+--------------------+

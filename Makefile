@@ -39,5 +39,5 @@ LATEX_OPTIONS+=-V graphics=1
 	cat $(patsubst %.md,%.yml,$<) $< | pandoc -s -S -o $@ -
 
 clean:
-	rm -f *.{log,aux,toc}
+	rm -f *.log *.aux *.toc *.out
 

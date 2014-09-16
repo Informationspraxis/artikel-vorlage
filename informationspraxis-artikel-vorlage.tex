@@ -160,9 +160,7 @@ $endif$
 \fancypagestyle{plain}{
   \lhead{\includegraphics[width=11.3mm,height=10.5mm]{ip-logo.png}}
   \rhead{\footnotesize 
-    \textbf{$issue$ ($year$)}
-    $if(category)$\\ $category$$endif$
-  }
+    \textbf{$issue$ ($year$)}$if(category)$\\$category$$endif$}
   \cfoot{}\rfoot{}
 }
 
@@ -192,7 +190,7 @@ $endif$
 
   \vfill
   {\small
-  {\bfseries Datum der Einreichung / Annahme / Veröffentlichung}\\
+  {\bfseries Einreichung / Annahme / Veröffentlichung}\\
   $received$ / $accepted$ / $published$}
   \pagebreak
 }
