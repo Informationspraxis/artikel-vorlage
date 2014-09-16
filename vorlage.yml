@@ -1,8 +1,10 @@
 ---
+# Jeder Artikel muss mit Metadaten versehen sein. 
+# Diese Datei kann dazu als Vorlage verwendet werden.
+
+# Von den AutorInnen vergebene Metadaten
 title: Deutscher Titel
 title-en: English title
-year: 2014
-issue: 1 # ???
 author:
     - name: Vorname Nachname
       email: vorname@email.tld
@@ -10,6 +12,7 @@ author:
     - name: Vorname Nachname
       email: vorname@email.tld
       affiliation: Beispielorganisation
+      address: Beispielstraße 123, 00000 Dingshausen
 abstract:
     Jeder Artikel muss eine Zusammenfassung in deutscher Sprache enthalten. Die
     Zusammenfassung soll einen kurzen und vollständigen Überblick über den Inhalt
@@ -33,9 +36,14 @@ keywords-en:
 jita: 
     - A. Theoretische und allgemeine Aspekte von Bibliotheken und Informationen
     - GI. Weiterbildung
+license: CC-BY-SA 4.0
 
+# Von der Redaktion vergebene Metadaten
 category: Fachbeitrag
-license: 
-    short: CC-BY-SA 4.0
+year: 2014
+issue: 1
+received: 6.10.2014
+accepted: 12.11.2014
+published: 3.12.2014
 doi: 123.456/7890abcde
 ...

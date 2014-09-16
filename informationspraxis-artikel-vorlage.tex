@@ -145,31 +145,30 @@ $endif$
 \fancyhead{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
-%% Kopfzeile & Fußzeile folgende Seiten
+
+%% Kopfzeile & Fußzeile ab zweiter Seite
 \pagestyle{fancy}
 \lhead{\footnotesize $for(author)$$author.name$$sep$, $endfor$: $title$}
 \lfoot{\footnotesize
   \href{http://www.informationspraxis.de}{\underline{\smash{www.informationspraxis.de}}}
   $if(doi)$\;/\; \href{http://dx.doi.org/$doi$}{doi $doi$}$endif$
-  $if(license)$\\$license.short$$endif$
+  $if(license)$\\$license$$endif$
 }
 \rfoot{\textbf{\thepage}}
+
 %% Kopfzeile & Fußzeile Titelseite
 \fancypagestyle{plain}{
   \lhead{\includegraphics[width=11.3mm,height=10.5mm]{ip-logo.png}}
   \rhead{\footnotesize 
-    \textbf{$year$} / $issue$ % TODO: month, day ?
+    \textbf{$issue$ ($year$)}
     $if(category)$\\ $category$$endif$
   }
   \cfoot{}\rfoot{}
 }
 
-\usepackage[small,figurename=Abbildung,tablename=Tabelle]{caption}
-
 \makeatletter
+% Titelseite
 \renewcommand\@maketitle{
-  % TODO: affiliation, email, ...
-%    \subsection*{$for(author)$$author.name$$sep$, $endfor$}
   {\bfseries $for(author)$$author.name$$sep$, $endfor$ \par}
 
   \section*{\@title}
@@ -190,8 +189,15 @@ $endif$
 
   \subsubsection*{Classification}
   $for(jita)$$jita$$sep$, $endfor$
+
+  \vfill
+  {\small
+  {\bfseries Datum der Einreichung / Annahme / Veröffentlichung}\\
+  $received$ / $accepted$ / $published$}
   \pagebreak
 }
+
+\usepackage[small,figurename=Abbildung,tablename=Tabelle]{caption}
 
 $if(endnotes)$
 \usepackage{endnotes}
@@ -274,7 +280,7 @@ $for(author)$
 \item
 $author.name$$if(author.email)$, $author.email$$endif$
 
-$if(author.affiliation)$$author.affiliation$$if(author.address)$,$endif$$endif$$if(author.address)$$author.address$$endif$
+$if(author.affiliation)$$author.affiliation$$if(author.address)$, $endif$$endif$$if(author.address)$$author.address$$endif$
 
 $if(author.url)$ \url{$author.url$}$endif$
 
