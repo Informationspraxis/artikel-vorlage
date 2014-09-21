@@ -1,4 +1,4 @@
-default: vorlage.pdf vorlage.html vorlage.docx
+default: vorlage.pdf vorlage.html vorlage.docx vorlage.odt
 
 # Artikel-Vorlage für Pandoc (LaTeX und HTML)
 TEMPLATE=informationspraxis-artikel-vorlage
@@ -36,6 +36,9 @@ LATEX_OPTIONS+=-V graphics=1
 	cat $(patsubst %.md,%.yml,$<) $< | pandoc -s -S $(LATEX_OPTIONS) -o $@ -
 
 .md.docx:
+	cat $(patsubst %.md,%.yml,$<) $< | pandoc -s -S -o $@ -
+
+.md.odt:
 	cat $(patsubst %.md,%.yml,$<) $< | pandoc -s -S -o $@ -
 
 clean:

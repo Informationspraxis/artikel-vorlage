@@ -37,26 +37,58 @@ $endfor$
 $for(include-before)$
 $include-before$
 $endfor$
-$if(title)$
+
 <header>
+<div class="author">
+  <b>$for(author)$$author.name$$sep$, $endfor$</b>
+</div>
 <h1 class="title">$title$</h1>
-$if(subtitle)$
-<h1 class="subtitle">$subtitle$</h1>
-$endif$
-$for(author)$
-<h2 class="author">$author$</h2>
-$endfor$
-$if(date)$
-<h3 class="date">$date$</h3>
-$endif$
+<h2 class="abstract">Zusammenfassung</h2>
+<p>$abstract$</p>
+<h3 class="keywords">Schlüsselwörter</h3>
+<p>$for(keywords)$$keywords$$sep$, $endfor$</p>
+
+<h2>$title-en$</h2>
+<h3 class="abstract">Abstract</h3>
+<p>$abstract-en$</p>
+
+<h3>Keywords</h3>
+<p>$for(keywords-en)$$keywords-en$$sep$, $endfor$</p>
+
+<h3>Classification</h3>
+<p>$for(jita)$$jita$$sep$, $endfor$</p>
+
+<hr>
+<p>
+  <b>Einreichung / Annahme / Veröffentlichung:</b>
+  $received$ / $accepted$ / $published$
+</p>
+
 </header>
-$endif$
+
 $if(toc)$
 <nav id="$idprefix$TOC">
 $toc$
 </nav>
 $endif$
 $body$
+
+<h2>AutorInnen</h2>
+<ul>
+$for(author)$
+<li>
+  <div>$author.name$$if(author.email)$, $author.email$$endif$</div>
+  <div>
+  $if(author.affiliation)$$author.affiliation$$if(author.address)$, $endif$$endif$$if(author.address)$$author.address$$endif$
+  </div>
+  $if(author.url)$<div><a href="$author.url$">$author.url$</a></div>$endif$
+
+  <!-- TODO: author.orcid oder gnd -->
+
+</li>
+$endfor$
+</ul>
+
 $for(include-after)$
 $include-after$
 $endfor$
