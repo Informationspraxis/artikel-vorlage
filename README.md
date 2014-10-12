@@ -56,7 +56,7 @@ erstellt werden:
 Unter einem Unix-System mit LaTeX und Pandoc lässt sich die Vorlage
 folgendermaßen nach PDF, HTML, DOCX und ODT konvertieren:
 
-    make
+    make vorlage
 
 Die HTML-Version ist bislang noch nicht angepasst und die DOCX-Version enthält
 (absichtlich) keine Metadaten sondern nur den Artikelinhalt.

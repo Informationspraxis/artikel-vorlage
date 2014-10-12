@@ -128,6 +128,8 @@ $if(lang)$
 $endif$
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[german=quotes]{csquotes}
+
 % Seitenlayout
 \usepackage[
  % showframe,
@@ -148,11 +150,16 @@ $endif$
 
 %% Kopfzeile & Fußzeile ab zweiter Seite
 \pagestyle{fancy}
-\lhead{\footnotesize $for(author)$$author.name$$sep$, $endfor$: $title$}
+\lhead{\footnotesize 
+    $for(author)$$author.name$$sep$, $endfor$: 
+    $if(title-short)$$title-short$$else$$title$$endif$
+}
 \lfoot{\footnotesize
   \href{http://www.informationspraxis.de}{\underline{\smash{www.informationspraxis.de}}}
-  $if(doi)$\;/\; \href{http://dx.doi.org/$doi$}{doi $doi$}$endif$
   $if(license)$\\$license$$endif$
+}
+\cfoot{\footnotesize $if(doi)$\href{http://dx.doi.org/$doi$}{doi $doi$}$else$
+ \leavevmode\color{red}\textbf{$if(accepted)$PREPRINT$else$REVIEW-VERSION$endif$}$endif$
 }
 \rfoot{\textbf{\thepage}}
 
@@ -177,21 +184,34 @@ $endif$
   \subsubsection*{Schlüsselwörter}
   $for(keywords)$$keywords$$sep$, $endfor$
 
+  $if(title-en)$
   \subsection*{$title-en$}
+  $endif$
 
+  $if(abstract-en)$
   \subsubsection*{Abstract}
   $abstract-en$
+  $endif$
 
+  $if(keywords-en)$
   \subsubsection*{Keywords}
   $for(keywords-en)$$keywords-en$$sep$, $endfor$
+  $endif$
 
   \subsubsection*{Classification}
-  $for(jita)$$jita$$sep$, $endfor$
+  $for(jita)$$jita$$sep$\\ $endfor$
 
   \vfill
   {\small
-  {\bfseries Einreichung / Annahme / Veröffentlichung}\\
-  $received$ / $accepted$ / $published$}
+      {\bfseries Einreichung
+          $if(accepted)$/ Annahme$endif$ 
+          $if(published)$/ Veröffentlichung$endif$
+      }\\
+    $received$ 
+    $if(accepted)$/ $accepted$
+      $if(published)$/ $published$$endif$
+    $else${\bfseries\textcolor{red}{REVIEW-VERSION}}$endif$
+  }
   \pagebreak
 }
 
