@@ -17,7 +17,7 @@ Die Vorlage für Artikel besteht aus zwei Dateien:
     - von Format DOCX:
 
     ```
-    pandoc -o erstautorin-yyyy-mm-dd.md erstautorin-yyyy-mm-dd.docx
+    pandoc --extract-media . -o erstautorin-yyyy-mm-dd.md erstautorin-yyyy-mm-dd.docx
     ```
     
     - von Format ODT:
