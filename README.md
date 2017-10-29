@@ -42,17 +42,17 @@ Die Vorlage für Artikel besteht aus zwei Dateien:
 1.  Erstellung der HTML-Version
 
 	```
-	pandoc -s --template pandoc-template.html -o erstautorin-yyyy-mm-dd.html erstautorin-yyyy-mm-dd.md erstautorin-yyyy-mm-dd.yml
+	pandoc -s --template pandoc-template.html -o erstautorin-yyyy-mm-dd.html erstautorin-yyyy-mm-dd.yml erstautorin-yyyy-mm-dd.md
 	```
 
 2. Erstellung der PDF-Version
 
 	```
-	pandoc -s --template pandoc-template.tex -V fontsize=12pt -V papersize=a4paper -V documentclass=article -V headheight=20mm -V headsep=10mm -V footskip=20mm -V top=30mm -V bottom=40mm -V left=25mm -V right=25mm -V graphics=1 -o erstautorin-yyyy-mm-dd.pdf erstautorin-yyyy-mm-dd.md erstautorin-yyyy-mm-dd.yml
+	pandoc -s --template pandoc-template.tex -V fontsize=12pt -V papersize=a4paper -V documentclass=article -V headheight=20mm -V headsep=10mm -V footskip=20mm -V top=30mm -V bottom=40mm -V left=25mm -V right=25mm -V graphics=1 -o erstautorin-yyyy-mm-dd.pdf erstautorin-yyyy-mm-dd.yml erstautorin-yyyy-mm-dd.md
 	```
 
 3. Erstellung der EPUB-Version
 
 	```
-	pandoc -s -o erstautorin-yyyy-mm-dd.epub erstautorin-yyyy-mm-dd.md erstautorin-yyyy-mm-dd.yml
+	pandoc -s -o erstautorin-yyyy-mm-dd.epub erstautorin-yyyy-mm-dd.yml erstautorin-yyyy-mm-dd.md
 	```
