@@ -59,11 +59,11 @@ $if(colorlinks)$
 \PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
 $endif$
 \hypersetup{unicode=true,
-$if(title-meta)$
-            pdftitle={$title-meta$},
+$if(title)$
+            pdftitle={$title$},
 $endif$
-$if(author-meta)$
-            pdfauthor={$author-meta$},
+$if(author)$
+            pdfauthor={$author$},
 $endif$
 $if(keywords)$
             pdfkeywords={$for(keywords)$$keywords$$sep$; $endfor$},
@@ -212,31 +212,26 @@ $endfor$
 
 %% Kopfzeile & Fußzeile ab zweiter Seite
 \pagestyle{fancy}
-\lhead{\footnotesize 
-    $for(author)$$author.name$$sep$, $endfor$: 
-    $if(title-short)$$title-short$$else$$title$$endif$
-}
-\lfoot{\footnotesize
-  \href{http://www.informationspraxis.de}{\underline{\smash{www.informationspraxis.de}}}
-  $if(license)$\\$license$$endif$
-}
-\cfoot{\footnotesize $if(doi)$\href{http://dx.doi.org/$doi$}{doi $doi$}$else$
- \leavevmode\color{red}\textbf{$if(accepted)$PREPRINT$else$REVIEW-VERSION$endif$}$endif$
+\lfoot{\footnotesize 
+    $if(author-short)$$author-short$: $title-short$$endif$
 }
 \rfoot{\textbf{\thepage}}
 
 %% Kopfzeile & Fußzeile Titelseite
 \fancypagestyle{plain}{
-  \lhead{\includegraphics[width=11.3mm,height=10.5mm]{ip-logo.png}}
+  \lhead{\href{http://www.informationspraxis.de}{\includegraphics[width=11.3mm,height=10.5mm]{ip-logo.png}}}
   \rhead{\footnotesize 
-    \textbf{$issue$ ($year$)}$if(category)$\\$category$$endif$}
-  \cfoot{}\rfoot{}
+    \textbf{$publisher$}$if(category)$\\$category$$endif$}
+  \lfoot{\footnotesize\href{http://creativecommons.org/licenses/by/4.0/}{\includegraphics[width=20.mm]{cc-by.png}} Dieses Werk steht unter der Lizenz \href{http://creativecommons.org/licenses/by/4.0/}{Creative Commons Namensnennung 4.0 International}}
+  \rfoot{}
 }
 
 \makeatletter
 % Titelseite
 \renewcommand\@maketitle{
-  {\bfseries $for(author)$$author.name$$sep$, $endfor$ \par}
+  $if(identifier)$\href{https://doi.org/$identifier$}{DOI: https://doi.org/$identifier$}$endif$ \\
+  
+  {\bfseries $for(author-detail)$$author-detail.name$$sep$, $endfor$ \par}
 
   \section*{\@title}
 
@@ -260,19 +255,15 @@ $endfor$
   $for(keywords-en)$$keywords-en$$sep$, $endfor$
   $endif$
 
+  $if(jita)$
   \subsubsection*{Classification}
   $for(jita)$$jita$$sep$\\ $endfor$
+  $endif$
 
   \vfill
   {\small
-      {\bfseries Einreichung
-          $if(accepted)$/ Annahme$endif$ 
-          $if(published)$/ Veröffentlichung$endif$
-      }\\
-    $received$ 
-    $if(accepted)$/ $accepted$
-      $if(published)$/ $published$$endif$
-    $else${\bfseries\textcolor{red}{REVIEW-VERSION}}$endif$
+      {\bfseries Veröffentlichung}\\
+    $date$ in $publisher$
   }
   \pagebreak
 }
@@ -289,8 +280,8 @@ $if(subtitle)$
 \providecommand{\subtitle}[1]{}
 \subtitle{$subtitle$}
 $endif$
-$if(author)$
-\author{$for(author)$$author$$sep$ \and $endfor$}
+$if(author-detail)$
+\author{$for(author-detail)$$author-detail$$sep$ \and $endfor$}
 $endif$
 $if(institute)$
 \institute{$for(institute)$$institute$$sep$ \and $endfor$}
@@ -300,11 +291,6 @@ $endif$
 \begin{document}
 $if(title)$
 \maketitle
-$endif$
-$if(abstract)$
-\begin{abstract}
-$abstract$
-\end{abstract}
 $endif$
 
 $for(include-before)$
@@ -350,15 +336,15 @@ $endif$
 
 \subsection*{AutorInnen}
 \begin{itemize}
-$for(author)$
+$for(author-detail)$
 \item
-$author.name$$if(author.email)$, $author.email$$endif$
+$author-detail.name$$if(author-detail.email)$, $author-detail.email$$endif$
 
-$if(author.affiliation)$$author.affiliation$$if(author.address)$, $endif$$endif$$if(author.address)$$author.address$$endif$
+$if(author-detail.affiliation)$$author-detail.affiliation$$if(author-detail.address)$, $endif$$endif$$if(author-detail.address)$$author-detail.address$$endif$
 
-$if(author.url)$ \url{$author.url$}$endif$
+$if(author-detail.url)$ \url{$author-detail.url$}$endif$
 
-% TODO: author.orcid oder gnd
+$if(author-detail.orcid)$ \href{https://orcid.org/$author-detail.orcid$}{https://orcid.org/$author-detail.orcid$}$endif$
 
 $endfor$
 \end{itemize}

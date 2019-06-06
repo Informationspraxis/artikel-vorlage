@@ -4,17 +4,9 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-$for(author-meta)$
-  <meta name="author" content="$author-meta$">
-$endfor$
-$if(date-meta)$
-  <meta name="dcterms.date" content="$date-meta$">
-$endif$
+  <meta name="author" content="$author$">
   <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
   <style type="text/css">code{white-space: pre;}</style>
-  <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
 $if(quotes)$
   <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
 $endif$
@@ -39,52 +31,49 @@ $include-before$
 $endfor$
 
 <header>
-<div class="author">
-  <b>$for(author)$$author.name$$sep$, $endfor$</b>
-</div>
+<p>DOI: <a href="https://doi.org/$identifier$">https://doi.org/$identifier$</a></p>
+<p class="author"><b>$author$</b></p>
 <h1 class="title">$title$</h1>
-<h2 class="abstract">Zusammenfassung</h2>
+<h3 class="abstract">Zusammenfassung</h3>
 <p>$abstract$</p>
 <h3 class="keywords">Schlüsselwörter</h3>
 <p>$for(keywords)$$keywords$$sep$, $endfor$</p>
 
-<h2>$title-en$</h2>
+<h1 class="title">$title-en$</h2>
 <h3 class="abstract">Abstract</h3>
 <p>$abstract-en$</p>
-
-<h3>Keywords</h3>
+<h3 class="keywords">Keywords</h3>
 <p>$for(keywords-en)$$keywords-en$$sep$, $endfor$</p>
 
+$if(jita)$
 <h3>Classification</h3>
 <p>$for(jita)$$jita$$sep$, $endfor$</p>
+$endif$
 
 <hr>
-<p>
-  <b>Einreichung / Annahme / Veröffentlichung:</b>
-  $received$ / $accepted$ / $published$
-</p>
+<p><b>Veröffentlichung:</b> $date$ in $publisher$</p>
+<hr>
 
 </header>
 
 $if(toc)$
+<h1>Inhaltsverzeichnis</h1>
 <nav id="$idprefix$TOC">
 $toc$
 </nav>
 $endif$
 $body$
 
+<hr>
+
 <h2>AutorInnen</h2>
 <ul>
-$for(author)$
+$for(author-detail)$
 <li>
-  <div>$author.name$$if(author.email)$, $author.email$$endif$</div>
-  <div>
-  $if(author.affiliation)$$author.affiliation$$if(author.address)$, $endif$$endif$$if(author.address)$$author.address$$endif$
-  </div>
-  $if(author.url)$<div><a href="$author.url$">$author.url$</a></div>$endif$
-
-  <!-- TODO: author.orcid oder gnd -->
-
+  <div>$author-detail.name$$if(author-detail.email)$, $author-detail.email$$endif$</div>
+  $if(author-detail.affiliation)$<div>$author-detail.affiliation$$if(author-detail.address)$, $endif$$endif$$if(author-detail.address)$$author-detail.address$</div>$endif$
+  $if(author-detail.url)$<div><a href="$author-detail.url$">$author-detail.url$</a></div>$endif$
+  $if(author-detail.orcid)$<div><a href="https://orcid.org/$author-detail.orcid$">https://orcid.org/$author-detail.orcid$</a></div>$endif$
 </li>
 $endfor$
 </ul>
