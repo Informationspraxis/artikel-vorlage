@@ -1,0 +1,39 @@
+---
+# Von den AutorInnen vergebene Metadaten
+title: Deutscher Titel
+title-en: English title
+author: Vorname NACHNAME, Vorname NACHNAME
+author-detail:
+    - name: Vorname Nachname
+      email: name@beispiel.de
+      url: http://example.org
+      orcid: 0000-0000-0000-0001
+    - name: Vorname Nachname
+      email: name@beispiel.de
+      affiliation: Beispielorganisation
+      address: Beispielstraße 123, 00000 Dingshausen
+abstract:
+    Jeder Artikel muss eine Zusammenfassung in deutscher Sprache enthalten. Die Zusammenfassung soll einen kurzen und vollständigen Überblick über den Inhalt des Artikels geben. Die wichtigsten Ergebnisse, Hintergrund und Vorgehensweise des Artikels sollten klar nachvollziehbar aus der Zusammenfassung hervorgehen. Der Umfang der Zusammenfassung ist auf 700 Zeichen (incl. Leerzeichen) beschränkt. Die Zusammenfassung sollte aus einem einzelnen Absatz bestehen.
+abstract-en:
+    Every article must contain an English abstract. The abstract is limited to one paragraph and up to 700 characters.
+keywords:
+    - Schlüsselwort 1
+    - Schlüsselwort 2
+    - Schlüsselwort 3 (max 5)
+keywords-en:
+    - keyword 1
+    - keyword 2
+    - keyword 3 (max 5)
+
+# Von der Redaktion vergebene Metadaten
+author-short: Nachname/Nachname
+title-short: Kurztitel
+category: Fachbeitrag
+date: 10.03.2019
+received: 10.03.2019
+accepted: 10.03.2019
+identifier: 10.11588/ip.2019.1.52673
+publisher: Informationspraxis Bd. 5, Nr. 1 (2019)
+lang: de
+rights: CC-BY 4.0
+...
