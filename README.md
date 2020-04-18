@@ -4,8 +4,7 @@ Dieses Repository enthält Vorlagen für Artikel der Fachzeitschrift [Informatio
 
 * [vorlage-word.dotx](vorlage-word.dotx) zum Verfassen mit Word
 * [vorlage-markdown.md](vorlage-markdown.md) zum Verfassen in Markdown-Syntax
-* vorlage-libreoffice.ott zum Verfassen mit Libre/Open Office
-  - [ ] TODO: Vorlage für LibreOffice
+* [vorlage-libreoffice.ott](vorlage-libreoffice.ott) zum Verfassen mit Libre/Open Office
 
 ## Redaktionsworkflow
 
