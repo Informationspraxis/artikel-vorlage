@@ -16,7 +16,7 @@ Für die Konvertierung der eingereichten Artikel nach HTML, PDF und EPUB nutzen 
   - Einreichung nach Word-Vorlage: [example/erstautorin-2019.docx](example/erstautorin-2019.docx)
 - Redaktion
   - Metadaten in YAML erfassen: [example/erstautorin-2019.yaml](example/erstautorin-2019.yaml)
-  - Markdown aus DOCX generiert und nachbearbeitet: [example/erstautorin-2019.yaml](example/erstautorin-2019.yaml)
+  - Markdown aus DOCX generiert und nachbearbeitet: [example/erstautorin-2019.md](example/erstautorin-2019.md)
 - Pandoc
   - HTML: [example/erstautorin-2019.html](example/erstautorin-2019.html)
   - PDF: [example/erstautorin-2019.pdf](example/erstautorin-2019.pdf)
@@ -30,7 +30,7 @@ Windows, MacOS, Linux:
   * Pandoc benötigt LaTeX, siehe dazu den letzten Punkt der Pandoc Installationsanweisung.
   * Unter Windows wird beispielsweise die (zusätzliche) Installation von [MiKTeX](https://miktex.org/howto/install-miktex) empfohlen.
 * Markdown-Editor Typora installieren: https://typora.io/#download
-* Vorlagen herunterladen: https://github.com/felixlohmeier/artikel-vorlage/archive/master.zip
+* Vorlagen herunterladen: https://github.com/Informationspraxis/artikel-vorlage/archive/master.zip
 
 Windows zusätzlich:
 
