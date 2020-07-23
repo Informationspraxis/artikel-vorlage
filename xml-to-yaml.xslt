@@ -15,19 +15,40 @@ xmlns:pkp="http://pkp.sfu.ca">
 	<xsl:text>&#xa;abstract-en:</xsl:text>
 	<xsl:text>&#xa;keywords-en:</xsl:text>
 	<xsl:text>&#xa;&#xa;# Von der Redaktion vergebene Metadaten&#xa;</xsl:text>
-	<xsl:text>&#xa;author-short: TODO</xsl:text>
-	<xsl:text>&#xa;title-short:</xsl:text>
-	<xsl:value-of select="substring(./pkp:title[@locale='de_DE'], 20)" />
+	<xsl:text>&#xa;author-short: </xsl:text>
+	<xsl:for-each select="./pkp:authors/pkp:author">
+		<xsl:value-of select="./pkp:familyname" />
+		<xsl:choose>
+      <xsl:when test="position() != last()">
+			  <xsl:text>/</xsl:text>
+			</xsl:when>
+    </xsl:choose>
+	</xsl:for-each>
+	<xsl:text>&#xa;title-short: </xsl:text>
+	<xsl:variable name="shorttitle1" select="substring-before(./pkp:title[@locale='de_DE'], ' – ')" />
+	<xsl:choose>
+		<xsl:when test="string-length($shorttitle1) &lt; 40">
+			<xsl:value-of select="$shorttitle1" />
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:value-of select="substring(./pkp:title[@locale='de_DE'], 1, 40)" />
+		</xsl:otherwise>
+	</xsl:choose>
 	<xsl:text>&#xa;category: </xsl:text>
-	<xsl:value-of select="@section_ref" />
-	<xsl:text>&#xa;date: 2020</xsl:text>
-	<xsl:value-of select="./pkp:copyrightYear" />
+	<xsl:if test="@section_ref='KurzB'">
+		<xsl:text>Kurzbeitrag</xsl:text>
+	</xsl:if>
+	<xsl:if test="@section_ref='FachB'">
+		<xsl:text>Fachbeitrag</xsl:text>
+	</xsl:if>
+	<xsl:text>&#xa;date: </xsl:text>
+	<xsl:value-of select="@date_published" />
 	<xsl:text>&#xa;identifier: 10.11588/ip.YYYY.N.</xsl:text>
 	<xsl:value-of select="./pkp:id" />
 	<xsl:text>&#xa;publisher: Informationspraxis Bd. </xsl:text>
 	<xsl:value-of select="./pkp:issue_identification/pkp:volume" />
 	<xsl:text>, Nr. </xsl:text>
-	<xsl:value-of select="./pkp:issue_identification/pkp:issue" />
+	<xsl:value-of select="./pkp:issue_identification/pkp:number" />
 	<xsl:text> (</xsl:text>
 	<xsl:value-of select="./pkp:issue_identification/pkp:year" />
 	<xsl:text>)</xsl:text>
@@ -84,7 +105,7 @@ xmlns:pkp="http://pkp.sfu.ca">
   <xsl:if test="@locale='en_US'">
     <xsl:text>&#xa;abstract-en: &#xa;    </xsl:text>
 	</xsl:if>
-  <xsl:value-of select="." />
+  <xsl:value-of select="normalize-space(.)" />
 </xsl:template>
 
 <xsl:template match="pkp:subjects[@locale='de_DE']">
