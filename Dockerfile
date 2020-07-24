@@ -10,8 +10,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends xsltproc texliv
 RUN tlmgr install csquotes amsmath eurosym mathspec fontspec upquote microtype geometry hyperref polyglossia natbib biblatex fancyvrb booktabs grffile ulem parskip bidi fancyhdr caption infwarerr babel-german newfloat epstopdf epstopdf-pkg
 
 ## Copies your repo files into the Docker Container
-COPY . ${HOME}
-RUN chown -R ${NB_USER} ${HOME}
+COPY . /home/rstudio
+RUN chown -R ${NB_USER} /home/rstudio
 
 ## Become normal user again
 USER ${NB_USER}
