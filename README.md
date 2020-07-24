@@ -1,3 +1,5 @@
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Informationspraxis/artikel-vorlage/master?filepath=README.md&urlpath=rstudio)
+
 Dieses Repository enthält Vorlagen für Artikel der Fachzeitschrift [Informationspraxis](http://informationspraxis.de/) sowie Konfigurationsdateien zur Konvertierung der Artikel mit [Pandoc](https://pandoc.org) nach HTML, PDF und EPUB.
 
 ## Vorlage für Beitragseinreichungen
