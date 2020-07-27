@@ -22,9 +22,9 @@ all : $(EXPORTED)
 
 # Create Markdown file from either Microsoft or LibreOffice document
 %.md: %.docx
-	pandoc --extract-media . --wrap=none -t markdown-simple_tables -o $@ $^
+	pandoc --extract-media . --wrap=none --lua-filter clean-images.lua --lua-filter compact-lists.lua -t markdown-simple_tables -o $@ $^
 %.md: %.odt
-	pandoc --extract-media . --wrap=none -t markdown-simple_tables -o $@ $^
+	pandoc --extract-media . --wrap=none --lua-filter clean-images.lua --lua-filter compact-lists.lua -t markdown-simple_tables -o $@ $^
 
 # Create YAML file with metadata
 #
@@ -47,3 +47,7 @@ all : $(EXPORTED)
 # For debugging
 %.tex: %.md %.yml
 	pandoc -s --toc --template pandoc-template.tex -V fontsize=12pt -V papersize=a4paper -V documentclass=article -V headheight=20mm -V headsep=10mm -V footskip=20mm -V top=30mm -V bottom=40mm -V left=25mm -V right=25mm -V graphics=1 -o $@ $^
+%.native.txt: %.docx
+	pandoc --extract-media . --wrap=none --lua-filter clean-images.lua --lua-filter compact-lists.lua -t native -o $@ $^
+%.native.txt: %.odt
+	pandoc --extract-media . --wrap=none --lua-filter clean-images.lua --lua-filter compact-lists.lua -t native -o $@ $^

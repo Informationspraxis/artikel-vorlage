@@ -72,13 +72,13 @@ Legen Sie das eingereichte Dokument ebenfalls in diesem Verzeichnis ab. In diese
 - von Format DOCX (Beispiel für Quelldatei `erstautorin-2019.docx`)
 
 ```
-pandoc --extract-media . --wrap=none -t markdown-simple_tables -o erstautorin-2019.md erstautorin-2019.docx
+pandoc --extract-media . --wrap=none --lua-filter clean-images.lua --lua-filter compact-lists.lua -t markdown-simple_tables -o erstautorin-2019.md erstautorin-2019.docx
 ```
 
 - von Format ODT (Beispiel für Quelldatei `erstautorin-2019.odt`)
 
 ```
-pandoc --extract-media . --wrap=none -t markdown-simple_tables -o erstautorin-2019.md erstautorin-2019.odt
+pandoc --extract-media . --wrap=none --lua-filter clean-images.lua --lua-filter compact-lists.lua -t markdown-simple_tables -o erstautorin-2019.md erstautorin-2019.odt
 ```
 
 #### Schritt 3: Nachbearbeitung der Markdown-Datei
@@ -90,9 +90,8 @@ Die im vorigen Schritt erstellte Markdown-Datei in einem Markdown-Editor (z.B. T
 Folgende Nacharbeiten sind erforderlich:
 
 * Metadaten und Fragmente aus der Vorlage zu Beginn der Datei löschen. Der Text muss direkt mit der ersten Überschrift (z.B. `1 Einleitung`) beginnen.
-* Prüfen, ob alle Bilder korrekt angezeigt werden. Größenangaben wie `{width="6.531496062992126in" height="2.263779527559055in"}` löschen.
+* Prüfen, ob alle Bilder korrekt angezeigt werden.
 * Bildunterschriften prüfen und ggf. vereinheitlichen.
-* Wenn Listen kompakt dargestellt werden sollen, dann im Quellcode (Menü Darstellung / Quellcodemodus) leere Zeilen innerhalb der Aufzählungen entfernen.
 * Ggf. weitere Formatierung gemäß der [Richtlinien](https://journals.ub.uni-heidelberg.de/index.php/ip/about/submissions) und nach [Pandoc-Markdown-Syntax](http://pandoc.org/MANUAL.html#pandocs-markdown)
 
 ### HTML, PDF und EPUB generieren
