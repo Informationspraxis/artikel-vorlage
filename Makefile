@@ -33,7 +33,7 @@ all : $(EXPORTED)
 #	xsltproc xml-to-yaml.xslt $^ > $@
 #
 # alternative when there is no xml file
-%.yml: %.md
+%.yml:
 	cp vorlage-metadaten.yml $@
 
 # Create all the ouput formats from the md files
