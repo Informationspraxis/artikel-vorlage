@@ -75,7 +75,7 @@ Verwenden Sie Fuß- bzw. Endnoten allenfalls für notwendige Anmerkungen.[^1]
 
 ### 2.2.1 Tabellen (Überschrift 3. Ebene)
 
-Tabellen können in 3 verschiedenen Varianten erstellt werden. Komplex formatierte Tabellen bitte als Bilddatei einfügen. Alle Tabellen bitte mit einer Bildunterschrift in der Form „Tabelle 1: ..." versehen und durchnummerieren.
+Tabellen können in 4 verschiedenen Varianten erstellt werden. Komplex formatierte Tabellen bitte als Bilddatei einfügen. Alle Tabellen bitte mit einer Bildunterschrift in der Form „Tabelle 1: ..." versehen und durchnummerieren.
 
 Spalte 1   Spalte 2   Spalte 3   Spalte 4
 ---------- ---------- ---------- -----------
@@ -89,7 +89,9 @@ Tabelle 1: Zahlen und ein Minuszeichen (Variante simple_tables)
 | Spalte 1 | Spalte 2 | Spalte 3 | Spalte 4  |
 +==========+==========+==========+===========+
 | Zeile 2  | 123,45   | 17,2     | 1232,23   |
++----------+----------+----------+-----------+
 | Zeile 3  | 56,78    | \-       | 189,9     |
++----------+----------+----------+-----------+
 | Zeile 4  | 198      | 67,325   | 789567,03 |
 +----------+----------+----------+-----------+
 
@@ -102,6 +104,18 @@ Tabelle 2: Zahlen und ein Minuszeichen (Variante grid_tables)
 | Zeile 4  | 198      | 67,325   | 789567,03 |
 
 Tabelle 3: Zahlen und ein Minuszeichen (Variante pipe_tables)
+
+-----------------------------------------
+ Spalte 1  Spalte 2  Spalte 3  Spalte 4  
+---------- --------- --------- ----------
+ Zeile 2   123,45    17,2      1232,23   
+ 
+ Zeile 3   56,78     \-        189,9     
+ 
+ Zeile 4   198       67,325    789567,03 
+-----------------------------------------
+
+Tabelle 4: Zahlen und ein Minuszeichen (Variante multiline_tables)
 
 ### 2.2.2 Listen
 
