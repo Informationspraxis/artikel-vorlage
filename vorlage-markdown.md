@@ -119,12 +119,13 @@ Tabelle 4: Zahlen und ein Minuszeichen (Variante multiline_tables)
 
 ### 2.2.2 Listen
 
-Einfache Listen:
+Aufzählungslisten beginnen mit einem Aufzählungszeichen nach einer Leerzeile:
 
 - Ein Stichpunkt
 	- Ein Stichpunkt auf zweiter Ebene
 	- Ein weiterer Stichpunkt auf zweiter Ebene
 - Ein weiterer Stichpunkt
+mit Fortsetzung hier
 
 Nummerierte Listen:
 
@@ -142,6 +143,7 @@ Lange URLs als betitelte Links einfügen (und lieber nicht als Endnote):
 [Richtlinien für das Open Peer Review der Zeitschrift Informationspraxis](http://informationspraxis.de/zeitschrift-informationspraxis/richtlinien-fuer-das-open-peer-review/)
 
 Querverweise im Dokument sind möglich, aber nur auf zuvor selbst erstellte Textmarken.
+
 - Beispiel für eine Textmarke: []{#Tabelle1 .anchor}
 - Beispiel für einen Querverweis darauf: [\#Tabelle1](#Tabelle1)
 
