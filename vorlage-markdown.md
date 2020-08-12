@@ -1,14 +1,7 @@
-**Vorlage für Beiträge zur Zeitschrift Informationspraxis**
-
-Stand: 6.6.2019
-
-Verwenden Sie bitte nur die hier beschriebenen Formatierungen und verzichten Sie auf eine aufwendige Gestaltung, da diese einen raschen Veröffentlichungsprozess behindert.
-
-Geben Sie bitte die Metadaten in der untenstehenden Form an. Diese werden von der Redaktion auch in das Deckblatt übernommen, so dass Sie direkt mit dem ersten Kapitel beginnen können.
-
-```
-# Von den AutorInnen vergebene Metadaten
-title: Deutscher Titel
+---
+template-version: 12.08.2020
+# Geben Sie bitte die Metadaten in der untenstehenden Form an. Diese werden von der Redaktion in das Deckblatt übernommen, so dass Sie nach dem Block hier direkt mit dem ersten Kapitel beginnen können.
+title: Vorlage für Beiträge zur Zeitschrift Informationspraxis
 title-en: English title
 author: Vorname NACHNAME, Vorname NACHNAME
 author-detail:
@@ -32,10 +25,14 @@ keywords-en:
     - keyword 1
     - keyword 2
     - keyword 3 (max 5)
-```
+# Weitere benötigte Metadaten werden von der Redaktion ergänzt.
+---
+
 
 1 Einleitung (Überschrift 1. Ebene)
 ===================================
+
+Verwenden Sie bitte nur die hier beschriebenen Formatierungen und verzichten Sie auf eine aufwendige Gestaltung, da diese einen raschen Veröffentlichungsprozess behindert.
 
 Titel, Zusammenfassung, Schlüsselwörter und Angaben zu den AutorInnen (alles in deutsch und englisch) bitte ausschließlich im obigen Formular. Bitte kein Inhaltsverzeichnis erstellen, das wird von der Redaktion automatisch generiert. Kurze, prägnante Überschriften verfassen und bitte keine (durchgängige) Großschreibung verwenden.
 
