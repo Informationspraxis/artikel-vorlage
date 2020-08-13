@@ -1,14 +1,7 @@
-**Vorlage für Beiträge zur Zeitschrift Informationspraxis**
-
-Stand: 6.6.2019
-
-Verwenden Sie bitte nur die hier beschriebenen Formatierungen und verzichten Sie auf eine aufwendige Gestaltung, da diese einen raschen Veröffentlichungsprozess behindert.
-
-Geben Sie bitte die Metadaten in der untenstehenden Form an. Diese werden von der Redaktion auch in das Deckblatt übernommen, so dass Sie direkt mit dem ersten Kapitel beginnen können.
-
-```
-# Von den AutorInnen vergebene Metadaten
-title: Deutscher Titel
+---
+template-version: 12.08.2020
+# Geben Sie bitte die Metadaten in der untenstehenden Form an. Diese werden von der Redaktion in das Deckblatt übernommen, so dass Sie nach dem Block hier direkt mit dem ersten Kapitel beginnen können.
+title: Vorlage für Beiträge zur Zeitschrift Informationspraxis
 title-en: English title
 author: Vorname NACHNAME, Vorname NACHNAME
 author-detail:
@@ -32,10 +25,14 @@ keywords-en:
     - keyword 1
     - keyword 2
     - keyword 3 (max 5)
-```
+# Weitere benötigte Metadaten werden von der Redaktion ergänzt.
+---
+
 
 1 Einleitung (Überschrift 1. Ebene)
 ===================================
+
+Verwenden Sie bitte nur die hier beschriebenen Formatierungen und verzichten Sie auf eine aufwendige Gestaltung, da diese einen raschen Veröffentlichungsprozess behindert.
 
 Titel, Zusammenfassung, Schlüsselwörter und Angaben zu den AutorInnen (alles in deutsch und englisch) bitte ausschließlich im obigen Formular. Bitte kein Inhaltsverzeichnis erstellen, das wird von der Redaktion automatisch generiert. Kurze, prägnante Überschriften verfassen und bitte keine (durchgängige) Großschreibung verwenden.
 
@@ -75,7 +72,7 @@ Verwenden Sie Fuß- bzw. Endnoten allenfalls für notwendige Anmerkungen.[^1]
 
 ### 2.2.1 Tabellen (Überschrift 3. Ebene)
 
-Tabellen können in 3 verschiedenen Varianten erstellt werden. Komplex formatierte Tabellen bitte als Bilddatei einfügen. Alle Tabellen bitte mit einer Bildunterschrift in der Form „Tabelle 1: ..." versehen und durchnummerieren.
+Tabellen können in 4 verschiedenen Varianten erstellt werden. Komplex formatierte Tabellen bitte als Bilddatei einfügen. Alle Tabellen bitte mit einer Bildunterschrift in der Form „Tabelle 1: ..." versehen und durchnummerieren.
 
 Spalte 1   Spalte 2   Spalte 3   Spalte 4
 ---------- ---------- ---------- -----------
@@ -89,7 +86,9 @@ Tabelle 1: Zahlen und ein Minuszeichen (Variante simple_tables)
 | Spalte 1 | Spalte 2 | Spalte 3 | Spalte 4  |
 +==========+==========+==========+===========+
 | Zeile 2  | 123,45   | 17,2     | 1232,23   |
++----------+----------+----------+-----------+
 | Zeile 3  | 56,78    | \-       | 189,9     |
++----------+----------+----------+-----------+
 | Zeile 4  | 198      | 67,325   | 789567,03 |
 +----------+----------+----------+-----------+
 
@@ -103,14 +102,27 @@ Tabelle 2: Zahlen und ein Minuszeichen (Variante grid_tables)
 
 Tabelle 3: Zahlen und ein Minuszeichen (Variante pipe_tables)
 
+-----------------------------------------
+ Spalte 1  Spalte 2  Spalte 3  Spalte 4  
+---------- --------- --------- ----------
+ Zeile 2   123,45    17,2      1232,23   
+ 
+ Zeile 3   56,78     \-        189,9     
+ 
+ Zeile 4   198       67,325    789567,03 
+-----------------------------------------
+
+Tabelle 4: Zahlen und ein Minuszeichen (Variante multiline_tables)
+
 ### 2.2.2 Listen
 
-Einfache Listen:
+Aufzählungslisten beginnen mit einem Aufzählungszeichen nach einer Leerzeile:
 
 - Ein Stichpunkt
 	- Ein Stichpunkt auf zweiter Ebene
 	- Ein weiterer Stichpunkt auf zweiter Ebene
 - Ein weiterer Stichpunkt
+mit Fortsetzung hier
 
 Nummerierte Listen:
 
@@ -128,6 +140,7 @@ Lange URLs als betitelte Links einfügen (und lieber nicht als Endnote):
 [Richtlinien für das Open Peer Review der Zeitschrift Informationspraxis](http://informationspraxis.de/zeitschrift-informationspraxis/richtlinien-fuer-das-open-peer-review/)
 
 Querverweise im Dokument sind möglich, aber nur auf zuvor selbst erstellte Textmarken.
+
 - Beispiel für eine Textmarke: []{#Tabelle1 .anchor}
 - Beispiel für einen Querverweis darauf: [\#Tabelle1](#Tabelle1)
 
