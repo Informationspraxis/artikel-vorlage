@@ -3,9 +3,10 @@
 # 
 # You can creates either (1) all article galleys from all the docx and odt
 # files in this directory, or (2) make a specific galley (recognized by
-# the file ending) from a specific article only
+# the file ending) from a specific article only, or check all yaml files (3)
 # (1) make
 # (2) make article.pdf
+# (3) make check
 #
 
 SOURCE_DOCS := $(wildcard *.docx *.odt)
@@ -44,10 +45,15 @@ all : $(EXPORTED)
 %.epub: %.md %.yml
 	pandoc -s --toc -o $@ $^
 
+# For validating/checking all YAML files
+.PHONY: check
+check:
+	yamllint *.yml
+
 # For debugging
 %.tex: %.md %.yml
 	pandoc -s --toc --template pandoc-template.tex -V fontsize=12pt -V papersize=a4paper -V documentclass=article -V headheight=20mm -V headsep=10mm -V footskip=20mm -V top=30mm -V bottom=40mm -V left=25mm -V right=25mm -V graphics=1 -o $@ $^
 %.native.txt: %.docx
-	pandoc --extract-media . --wrap=none --lua-filter clean-images.lua --lua-filter compact-lists.lua -t native -o $@ $^
+	pandoc -s --extract-media . --wrap=none --lua-filter clean-images.lua --lua-filter compact-lists.lua -t native -o $@ $^
 %.native.txt: %.odt
-	pandoc --extract-media . --wrap=none --lua-filter clean-images.lua --lua-filter compact-lists.lua -t native -o $@ $^
+	pandoc -s --extract-media . --wrap=none --lua-filter clean-images.lua --lua-filter compact-lists.lua -t native -o $@ $^

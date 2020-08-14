@@ -1,0 +1,18 @@
+# configuration file for yamllint extending the default one
+
+extends: default
+
+rules:
+  comments:
+    require-starting-space: true
+    min-spaces-from-content: 2
+  document-start:
+    level: error
+  document-end:
+    level: error
+  empty-lines:
+    max: 0
+  empty-values: enable
+  line-length: disable
+  trailing-spaces:
+    level: warning
