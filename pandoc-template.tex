@@ -58,6 +58,7 @@ $endif$
 $if(colorlinks)$
 \PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
 $endif$
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \hypersetup{unicode=true,
 $if(title)$
             pdftitle={$title$},
