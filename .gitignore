@@ -1,0 +1,15 @@
+*.pdf
+*.html
+!pandoc-template.html
+*.epub
+*.docx
+*.odt
+*.md
+!README.md
+!vorlage-markdown.md
+*.yml
+!vorlage-metadaten.yml
+*.tex
+*.log
+*.native.txt
+media/*

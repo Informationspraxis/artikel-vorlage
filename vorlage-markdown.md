@@ -45,11 +45,12 @@ Alle Beiträge erscheinen unter der Lizenz Creative Commons Namensnennung 4.0. D
 
 Abbildungen bitte als Bilddatei mitschicken, hier mit Dateinamen einbinden und nicht weiter formatieren.
 
-![](image1.png)
+![Abb. 1: Workflow zur Verarbeitung der Eingabedateien und Erzeugung der Fahnen](workflow.png){ #workflow }
 
-Abb. 1: Titel Abbildung 1
-
-Abbildungen bitte wie oben mit Bildunterschriften versehen und durchnummerieren.
+Bildunterschriften werden bei Abbildungen automatisch aus dem Alt-Tag (Text zwischen eckiger Klammer) erzeugt.
+Eine Bildunterschrift soll immer mit "Abb." beginnen gefolgt von einer fortlaufend hochgezählten Nummer (beginnend bei 1) und mit einem Doppelpunkt vom eigentlichen Inhalt der Bildunterschrift getrennt werden.
+Die ID in den geschwungen Klammern ist optional, aber erlaubt es einen internen Link auf die Abbildung zu setzen.
+Auch für solche Verweise bitte konsistent "Abb." sowie der Nummer angeben, z.B. [Abb. 1](#workflow).
 
 2.1 Zitate (Überschrift 2. Ebene)
 ---------------------------------
