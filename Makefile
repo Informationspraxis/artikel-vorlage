@@ -28,9 +28,9 @@ all : $(EXPORTED)
 
 # Create Markdown file from either Microsoft or LibreOffice document
 %.md: %.docx
-	pandoc --extract-media . --wrap=none $(LUA_FILTERS) -t markdown-simple_tables -o $@ $^
+	pandoc --extract-media . --wrap=none $(LUA_FILTERS) -t markdown-simple_tables-smart -o $@ $^
 %.md: %.odt
-	pandoc --extract-media . --wrap=none $(LUA_FILTERS) -t markdown-simple_tables -o $@ $^
+	pandoc --extract-media . --wrap=none $(LUA_FILTERS) -t markdown-simple_tables-smart -o $@ $^
 
 # Create YAML file with metadata
 #
