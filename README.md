@@ -12,6 +12,8 @@ Dieses Repository enthält Vorlagen für Artikel der Fachzeitschrift [Informatio
 
 Für die Konvertierung der eingereichten Artikel nach HTML, PDF und EPUB nutzen wir [Pandoc](https://pandoc.org/). Für die redaktionelle Bearbeitung nutzen wir den Markdown-Editor [Typora](https://typora.io). Beide Tools sind für Windows, macOS und Linux verfügbar. Unter Windows benötigen wir zusätzlich einen vernünftigen Texteditor zur Bearbeitung der Metadaten im YAML-Format wie z.B. Notepad++.
 
+![Workflow mit Pandoc](workflow.png)
+
 ### Beispiel
 
 - AutorInnen
