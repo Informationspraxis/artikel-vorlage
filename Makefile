@@ -46,7 +46,7 @@ all : $(EXPORTED)
 %.html: %.md %.yml
 	pandoc -s --toc --template pandoc-template.html -o $@ $^
 %.pdf: %.md %.yml
-	pandoc -s --toc --template pandoc-template.tex -V fontsize=12pt -V papersize=a4paper -V documentclass=article -V headheight=20mm -V headsep=10mm -V footskip=20mm -V top=30mm -V bottom=40mm -V left=25mm -V right=25mm -V graphics=1 -o $@ $^
+	pandoc -s --toc --template pandoc-template.tex -V fontsize=12pt -V papersize=a4paper -V documentclass=article -V headheight=20mm -V headsep=10mm -V footskip=20mm -V top=30mm -V bottom=40mm -V left=25mm -V right=25mm -V graphics=1 -V colorlinks -o $@ $^
 %.epub: %.md %.yml
 	pandoc -s --toc -o $@ $^
 
