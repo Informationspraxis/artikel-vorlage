@@ -11,7 +11,8 @@
 
 LUA_FILTERS := --lua-filter move-image-caption.lua \
                --lua-filter clean-images.lua \
-               --lua-filter compact-lists.lua
+               --lua-filter compact-lists.lua \
+               --lua-filter normalize-headers.lua
 
 SOURCE_DOCS := $(wildcard *.docx *.odt)
 SOURCE_DOCS_NORMALIZED := $(SOURCE_DOCS:.odt=.docx)
