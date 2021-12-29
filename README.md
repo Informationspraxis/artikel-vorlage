@@ -31,8 +31,10 @@ Für die Konvertierung der eingereichten Artikel nach HTML, PDF und EPUB nutzen 
 Windows, MacOS, Linux:
 
 * Pandoc installieren: https://pandoc.org/installing.html
-  * Pandoc benötigt LaTeX, siehe dazu den letzten Punkt der Pandoc Installationsanweisung.
-  * Unter Windows wird beispielsweise die (zusätzliche) Installation von [MiKTeX](https://miktex.org/howto/install-miktex) empfohlen.
+* LaTeX installieren (wird von Pandoc im Hintergrund benötigt)
+  * Unter Windows wird beispielsweise die Installation über [MiKTeX](https://miktex.org/howto/install-miktex)-Distribution empfohlen.
+  * Alternative und auch für die anderen Betriebssysteme ist die TeX-Live-Distribution
+  * Folgende LaTeX-Pakete benötigt für die Erzeugung der PDF-Fahnen in Informationspraxis: csquotes, amsmath, eurosym, mathspec, fontspec, upquote, microtype, geometry, hyperref, polyglossia, natbib, biblatex, fancyvrb, booktabs, grffile, ulem, parskip, bidi, fancyhdr, caption, infwarerr, babel-german, newfloat, epstopdf, epstopdf-pkg, xurl
 * Markdown-Editor Typora installieren: https://typora.io/#download
 * Vorlagen herunterladen: https://github.com/Informationspraxis/artikel-vorlage/archive/master.zip
 
